@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/springboot-split-table-common/springboot-split-table-common.iml" filepath="$PROJECT_DIR$/springboot-split-table-common/springboot-split-table-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-split-table-dao/springboot-split-table-dao.iml" filepath="$PROJECT_DIR$/springboot-split-table-dao/springboot-split-table-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-split-table-facade/springboot-split-table-facade.iml" filepath="$PROJECT_DIR$/springboot-split-table-facade/springboot-split-table-facade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-split-table-facade-stub/springboot-split-table-facade-stub.iml" filepath="$PROJECT_DIR$/springboot-split-table-facade-stub/springboot-split-table-facade-stub.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-split-table-improvement.iml" filepath="$PROJECT_DIR$/springboot-split-table-improvement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-split-table-service/springboot-split-table-service.iml" filepath="$PROJECT_DIR$/springboot-split-table-service/springboot-split-table-service.iml" />
+    </modules>
+  </component>
+</project>

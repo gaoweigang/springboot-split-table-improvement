@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gwg.demo.mapper.ZtoEnterStockMapper">
+  <resultMap id="BaseResultMap" type="com.gwg.demo.model.ZtoEnterStock">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="bill_code" jdbcType="VARCHAR" property="billCode" />
+    <result column="depot_code" jdbcType="VARCHAR" property="depotCode" />
+    <result column="take_code" jdbcType="VARCHAR" property="takeCode" />
+    <result column="upload_date" jdbcType="TIMESTAMP" property="uploadDate" />
+    <result column="express_company_code" jdbcType="VARCHAR" property="expressCompanyCode" />
+    <result column="express_type" jdbcType="INTEGER" property="expressType" />
+    <result column="receive_man" jdbcType="VARCHAR" property="receiveMan" />
+    <result column="receive_man_mobile" jdbcType="VARCHAR" property="receiveManMobile" />
+    <result column="receive_man_addr" jdbcType="VARCHAR" property="receiveManAddr" />
+  </resultMap>
+</mapper>

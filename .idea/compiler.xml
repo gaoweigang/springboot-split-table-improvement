@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="springboot-split-table-common" />
+        <module name="springboot-split-table-dao" />
+        <module name="springboot-split-table-facade" />
+        <module name="springboot-split-table-facade (1)" />
+        <module name="springboot-split-table-facade-stub" />
+        <module name="springboot-split-table-improvement (1)" />
+        <module name="springboot-split-table-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="springboot-split-table-common" target="1.8" />
+      <module name="springboot-split-table-dao" target="1.8" />
+      <module name="springboot-split-table-facade" target="1.8" />
+      <module name="springboot-split-table-facade (1)" target="1.8" />
+      <module name="springboot-split-table-facade-stub" target="1.8" />
+      <module name="springboot-split-table-improvement" target="1.8" />
+      <module name="springboot-split-table-improvement (1)" target="1.8" />
+      <module name="springboot-split-table-service" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
