@@ -96,8 +96,10 @@ public class SimpleShardingAlgorithm {
             return dbNameSet;
         }
     }
+
     class TableShardingAlgorithm implements SingleKeyTableShardingAlgorithm<Long> {
 
+        //计算使用那张表
         @Override
         public String doEqualSharding(Collection<String> collection, ShardingValue<Long> shardingValue) {
             Object number = shardingValue.getValue();

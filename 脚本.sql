@@ -1,49 +1,31 @@
 
 CREATE TABLE tbl_group_config (
-  id bigint(32) NOT NULL AUTO_INCREMENT COMMENT '主键',
-  group_code bigint(32) NOT NULL AUTO_INCREMENT COMMENT '组编码',
+  group_id bigint(32) NOT NULL COMMENT '主键',
   group_name varchar(20) NOT NULL COMMENT '组名',
-  start_id varchar(16) NOT NULL COMMENT '开始时间',
-  end_date varchar(12) NOT NULL COMMENT '结束时间',
-  remark datetime NOT NULL COMMENT '备注',
-  PRIMARY KEY (id),
-  UNIQUE KEY BILLCODE_DEPOTCODE_COMPANYCODE_UNIQUE (bill_code, depot_code, express_company_code) USING BTREE
+  start_id bigint(32) DEFAULT NULL COMMENT '开始时间',
+  end_id bigint(32) DEFAULT NULL COMMENT '结束时间',
+  start_date datetime(16) DEFAULT NULL COMMENT '开始时间',
+  end_date datetime(16) DEFAULT NULL COMMENT '开始时间',
+  start_date_ts bigint(32) DEFAULT NULL COMMENT '开始时间',
+  end_date_ts bigint(32) DEFAULT NULL COMMENT '开始时间',
+  remark varchar(128) DEFAULT NULL COMMENT '备注',
+  PRIMARY KEY (group_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-CREATE TABLE tbl_datasource_config (
-  id bigint(32) NOT NULL AUTO_INCREMENT COMMENT '主键',
-  bill_code varchar(20) NOT NULL COMMENT '单号',
-  depot_code varchar(16) NOT NULL COMMENT '形象店编号',
-  take_code varchar(12) NOT NULL COMMENT '取件码',
-  upload_date datetime NOT NULL COMMENT '入库时间',
-  express_company_code varchar(16) NOT NULL COMMENT '快递公司编号',
-  express_type int(10) NOT NULL DEFAULT '6' COMMENT '快件类型',
-  receive_man varchar(64) DEFAULT NULL COMMENT '收件人姓名',
-  receive_man_mobile varchar(64) DEFAULT NULL COMMENT '收件人联系方式',
-  receive_man_addr varchar(1024) DEFAULT NULL COMMENT '收件人地址',
-  PRIMARY KEY (id),
-  UNIQUE KEY BILLCODE_DEPOTCODE_COMPANYCODE_UNIQUE (bill_code, depot_code, express_company_code) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+insert into tbl_group_config values(1, 'group01', null, null, '2019-08-12 00:00:00', '2019-08-15 00:00:00', '1565577022000', '1565836222000', null);
 
 
 CREATE TABLE tbl_datasource_config (
-  id bigint(32) NOT NULL AUTO_INCREMENT COMMENT '主键',
-  bill_code varchar(20) NOT NULL COMMENT '单号',
-  depot_code varchar(16) NOT NULL COMMENT '形象店编号',
-  take_code varchar(12) NOT NULL COMMENT '取件码',
-  upload_date datetime NOT NULL COMMENT '入库时间',
-  express_company_code varchar(16) NOT NULL COMMENT '快递公司编号',
-  express_type int(10) NOT NULL DEFAULT '6' COMMENT '快件类型',
-  receive_man varchar(64) DEFAULT NULL COMMENT '收件人姓名',
-  receive_man_mobile varchar(64) DEFAULT NULL COMMENT '收件人联系方式',
-  receive_man_addr varchar(1024) DEFAULT NULL COMMENT '收件人地址',
-  PRIMARY KEY (id),
-  UNIQUE KEY BILLCODE_DEPOTCODE_COMPANYCODE_UNIQUE (bill_code, depot_code, express_company_code) USING BTREE
+  db_id bigint(32) NOT NULL COMMENT '数据库实例id',
+  db_name varchar(20) NOT NULL COMMENT '数据库实例名称',
+  group_id bigint(16) NOT NULL COMMENT '该数据库实例所属组ID',
+  hash_value varchar(12) NOT NULL COMMENT 'hash值对应的数据库实例',
+  remark varchar(128) DEFAULT NULL COMMENT '备注',
+  PRIMARY KEY (db_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-
-
-
+insert into tbl_datasource_config values(1, 'group01_db_0', 1, '0,1,2,3', null);
+insert into tbl_datasource_config values(2, 'group02_db_1', 1, '4,5,6', null);
+insert into tbl_datasource_config values(3, 'group02_db_2', 1, '7,8,6', null);
+insert into tbl_datasource_config values(4, 'group02_db_3', 1, '4,5,6', null);
 
 
 

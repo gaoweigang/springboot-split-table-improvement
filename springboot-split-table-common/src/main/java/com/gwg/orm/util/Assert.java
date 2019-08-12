@@ -11,7 +11,8 @@ import java.util.regex.Pattern;
 
 @Slf4j
 public final class Assert {
-	public static final String USER_ID_PATTERN = "\\d+";
+	//用户ID必须大于4的数字
+	public static final String USER_ID_PATTERN = "\\d{4,}";
 
 
 	public static void isMatchUserIdFormat(String userId) {

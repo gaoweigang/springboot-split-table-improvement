@@ -50,9 +50,15 @@ sharding:
        tableConfigs[0]:
              name: zto_enter_stock
              shardingColumn: depot_code
-             size: 8
+             size: 12
              strategy: hash
        defaultDSIndex: 0
        basePackage: com.gwg.*.mapper
        mapperLocations: classpath*:com/gwg/demo/mapper/*.xml
        typeAliasesPackage: com.gwg.*.model
+
+
+
+
+
+

@@ -17,24 +17,5 @@ public class StringUtil {
 		return false;
 	}
 
-	/**
-	 * 截取用户userId后4位
-	 */
-	public static String subStrLast(String param, int subCount){
-
-		int length = StringUtils.length(param);
-		if(length > subCount){
-			return StringUtils.substring(param, length -4);
-		}else if(length < subCount){
-			return String.format("%0"+subCount+"d", Integer.valueOf(param));
-		}
-		return null;
-
-	}
-
-	public static void main(String[] args) {
-
-		System.out.println(subStrLast("123", 8));
-	}
 
 }

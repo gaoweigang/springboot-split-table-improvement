@@ -2,6 +2,7 @@ package com.gwg.demo.service.impl;
 
 import java.util.List;
 
+import com.gwg.demo.dao.EnterStockDao;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,7 @@ public class EnterStockServiceImpl implements EnterStockService{
 	private static final Logger LOG = LoggerFactory.getLogger(EnterStockServiceImpl.class);
 	
 	@Autowired
-	private com.gwg.demo.dao.EnterStockDao enterStockDao;
+	private EnterStockDao enterStockDao;
 
 	public List<ZtoEnterStock> queryEnterStockByDepotCodeAndBillCode(EnterStockRequest request) throws Exception {
 		try {
