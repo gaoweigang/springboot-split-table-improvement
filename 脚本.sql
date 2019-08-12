@@ -1,34 +1,4 @@
 
-CREATE TABLE tbl_group_config (
-  group_id bigint(32) NOT NULL COMMENT '主键',
-  group_name varchar(20) NOT NULL COMMENT '组名',
-  start_id bigint(32) DEFAULT NULL COMMENT '开始时间',
-  end_id bigint(32) DEFAULT NULL COMMENT '结束时间',
-  start_date datetime(16) DEFAULT NULL COMMENT '开始时间',
-  end_date datetime(16) DEFAULT NULL COMMENT '开始时间',
-  start_date_ts bigint(32) DEFAULT NULL COMMENT '开始时间',
-  end_date_ts bigint(32) DEFAULT NULL COMMENT '开始时间',
-  remark varchar(128) DEFAULT NULL COMMENT '备注',
-  PRIMARY KEY (group_id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-insert into tbl_group_config values(1, 'group01', null, null, '2019-08-12 00:00:00', '2019-08-15 00:00:00', '1565577022000', '1565836222000', null);
-
-
-CREATE TABLE tbl_datasource_config (
-  db_id bigint(32) NOT NULL COMMENT '数据库实例id',
-  db_name varchar(20) NOT NULL COMMENT '数据库实例名称',
-  group_id bigint(16) NOT NULL COMMENT '该数据库实例所属组ID',
-  hash_value varchar(12) NOT NULL COMMENT 'hash值对应的数据库实例',
-  remark varchar(128) DEFAULT NULL COMMENT '备注',
-  PRIMARY KEY (db_id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-insert into tbl_datasource_config values(1, 'group01_db_0', 1, '0,1,2,3', null);
-insert into tbl_datasource_config values(2, 'group02_db_1', 1, '4,5,6', null);
-insert into tbl_datasource_config values(3, 'group02_db_2', 1, '7,8,6', null);
-insert into tbl_datasource_config values(4, 'group02_db_3', 1, '4,5,6', null);
-
-
-
 --创建数据库(即分区),测试创建4个库(即4个分区)，其中supermarket_00为主分区，所有的小表都在主分区上面，大表分布在4个分区上
 CREATE DATABASE supermarket_00;
 CREATE DATABASE supermarket_01;

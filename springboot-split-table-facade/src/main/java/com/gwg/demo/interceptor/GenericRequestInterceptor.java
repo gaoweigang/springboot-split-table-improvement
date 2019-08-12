@@ -20,7 +20,7 @@ public class GenericRequestInterceptor extends HandlerInterceptorAdapter {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         //从redis中获取Session
         UserDTO userDTO = new UserDTO();
-        userDTO.setUserCode(526842);
+        userDTO.setUserId("526842");
         userDTO.setUserName("gaoweigang");
         RequestContext ctxt = RequestContext.getOrCreate();
         ctxt.setUserDTO(userDTO);

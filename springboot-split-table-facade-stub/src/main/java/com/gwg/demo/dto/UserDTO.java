@@ -7,7 +7,7 @@ import java.io.Serializable;
 @Data
 public class UserDTO implements Serializable{
 
-    private Integer userCode;//用户编码
+    private String userId;//用户ID
 
     private String userName;//用户名称
 

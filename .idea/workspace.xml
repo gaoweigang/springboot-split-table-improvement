@@ -2,30 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4cfc924-b6e5-4a2a-b459-4707db31d954" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/springboot-split-table-common/pom.xml" afterPath="$PROJECT_DIR$/springboot-split-table-common/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/springboot-split-table-common/springboot-split-table-common.iml" afterPath="$PROJECT_DIR$/springboot-split-table-common/springboot-split-table-common.iml" />
-      <change beforePath="$PROJECT_DIR$/springboot-split-table-common/src/main/java/com/gwg/orm/shardingjdbc/SimpleShardingAlgorithm.java" afterPath="$PROJECT_DIR$/springboot-split-table-common/src/main/java/com/gwg/orm/shardingjdbc/SimpleShardingAlgorithm.java" />
-      <change beforePath="$PROJECT_DIR$/springboot-split-table-common/src/main/java/com/gwg/orm/util/Assert.java" afterPath="$PROJECT_DIR$/springboot-split-table-common/src/main/java/com/gwg/orm/util/Assert.java" />
-      <change beforePath="$PROJECT_DIR$/springboot-split-table-common/src/main/java/com/gwg/orm/util/OrderNoUtil.java" afterPath="$PROJECT_DIR$/springboot-split-table-common/src/main/java/com/gwg/orm/util/OrderNoUtil.java" />
-      <change beforePath="$PROJECT_DIR$/springboot-split-table-common/src/main/java/com/gwg/orm/util/StringUtil.java" afterPath="$PROJECT_DIR$/springboot-split-table-common/src/main/java/com/gwg/orm/util/StringUtil.java" />
-      <change beforePath="$PROJECT_DIR$/springboot-split-table-common/target/classes/com/gwg/orm/shardingjdbc/SimpleShardingAlgorithm$DatabaseShardingAlgorithm.class" afterPath="$PROJECT_DIR$/springboot-split-table-common/target/classes/com/gwg/orm/shardingjdbc/SimpleShardingAlgorithm$DatabaseShardingAlgorithm.class" />
-      <change beforePath="$PROJECT_DIR$/springboot-split-table-common/target/classes/com/gwg/orm/shardingjdbc/SimpleShardingAlgorithm$TableShardingAlgorithm.class" afterPath="$PROJECT_DIR$/springboot-split-table-common/target/classes/com/gwg/orm/shardingjdbc/SimpleShardingAlgorithm$TableShardingAlgorithm.class" />
-      <change beforePath="$PROJECT_DIR$/springboot-split-table-common/target/classes/com/gwg/orm/util/Assert.class" afterPath="$PROJECT_DIR$/springboot-split-table-common/target/classes/com/gwg/orm/util/Assert.class" />
-      <change beforePath="$PROJECT_DIR$/springboot-split-table-common/target/classes/com/gwg/orm/util/OrderNoUtil.class" afterPath="$PROJECT_DIR$/springboot-split-table-common/target/classes/com/gwg/orm/util/OrderNoUtil.class" />
-      <change beforePath="$PROJECT_DIR$/springboot-split-table-common/target/classes/com/gwg/orm/util/StringUtil.class" afterPath="$PROJECT_DIR$/springboot-split-table-common/target/classes/com/gwg/orm/util/StringUtil.class" />
-      <change beforePath="$PROJECT_DIR$/springboot-split-table-facade-stub/src/main/resources/application.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/springboot-split-table-facade-stub/src/main/resources/com/gwg/demo/mapper/ZtoEnterStockMapper.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/springboot-split-table-facade-stub/src/main/resources/logback.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/springboot-split-table-facade-stub/src/test/java/com/gwg/demo/service/test/EnterStockServiceTest.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/springboot-split-table-facade-stub/src/test/java/com/gwg/test/MathTest.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/springboot-split-table-facade-stub/src/test/java/com/gwg/test/PropertyTest.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/springboot-split-table-facade-stub/src/test/java/com/gwg/test/StringTest.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/springboot-split-table-facade/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/springboot-split-table-facade/src/main/resources/application.yml" />
-      <change beforePath="$PROJECT_DIR$/springboot-split-table-facade/src/test/java/com/gwg/test/MathTest.java" afterPath="$PROJECT_DIR$/springboot-split-table-facade/src/test/java/com/gwg/test/MathTest.java" />
-      <change beforePath="$PROJECT_DIR$/springboot-split-table-service/springboot-split-table-service.iml" afterPath="$PROJECT_DIR$/springboot-split-table-service/springboot-split-table-service.iml" />
-      <change beforePath="$PROJECT_DIR$/springboot-split-table-service/src/main/java/com/gwg/demo/service/impl/EnterStockServiceImpl.java" afterPath="$PROJECT_DIR$/springboot-split-table-service/src/main/java/com/gwg/demo/service/impl/EnterStockServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/springboot-split-table-facade-stub/src/main/java/com/gwg/demo/dto/UserDTO.java" afterPath="$PROJECT_DIR$/springboot-split-table-facade-stub/src/main/java/com/gwg/demo/dto/UserDTO.java" />
+      <change beforePath="$PROJECT_DIR$/springboot-split-table-facade/src/main/java/com/gwg/demo/interceptor/GenericRequestInterceptor.java" afterPath="$PROJECT_DIR$/springboot-split-table-facade/src/main/java/com/gwg/demo/interceptor/GenericRequestInterceptor.java" />
       <change beforePath="$PROJECT_DIR$/脚本.sql" afterPath="$PROJECT_DIR$/脚本.sql" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -47,27 +26,17 @@
         <entry file="file://$PROJECT_DIR$/springboot-split-table-common/src/main/java/com/gwg/orm/util/OrderNoUtil.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShardingJbdcUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot-split-table-common/src/main/java/com/gwg/orm/shardingjdbc/ShardingJbdcUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="脚本.sql" pinned="false" current-in-tab="false">
+      <file leaf-file-name="脚本.sql" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/脚本.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="140" lean-forward="false" selection-start-line="13" selection-start-column="62" selection-end-line="13" selection-end-column="140" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -83,21 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShardingJdbcConfiguration.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot-split-table-common/src/main/java/com/gwg/orm/configuration/ShardingJdbcConfiguration.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="51" column="36" lean-forward="false" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SimpleShardingAlgorithm.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SimpleShardingAlgorithm.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/springboot-split-table-common/src/main/java/com/gwg/orm/shardingjdbc/SimpleShardingAlgorithm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-969">
-              <caret line="18" column="36" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="36" />
+            <state relative-caret-position="544">
+              <caret line="115" column="92" lean-forward="false" selection-start-line="115" selection-start-column="92" selection-end-line="115" selection-end-column="92" />
               <folding>
                 <element signature="e#984#985#0" expanded="true" />
                 <element signature="e#1028#1029#0" expanded="true" />
@@ -116,24 +75,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EnvironmentAware.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.8.RELEASE/spring-context-4.3.8.RELEASE.jar!/org/springframework/context/EnvironmentAware.class">
+      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springboot-split-table-facade/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-              <folding>
-                <marker date="1565255316729" expanded="false" signature="0:104" ph="/.../" />
-                <marker date="1565255316729" expanded="false" signature="151:240" ph="..." />
-              </folding>
+            <state relative-caret-position="850">
+              <caret line="56" column="54" lean-forward="false" selection-start-line="56" selection-start-column="48" selection-end-line="56" selection-end-column="54" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot-split-table-facade/src/main/resources/application.yml">
+      <file leaf-file-name="GenericRequestInterceptor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springboot-split-table-facade/src/main/java/com/gwg/demo/interceptor/GenericRequestInterceptor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="952">
-              <caret line="56" column="54" lean-forward="false" selection-start-line="56" selection-start-column="48" selection-end-line="56" selection-end-column="54" />
+            <state relative-caret-position="272">
+              <caret line="22" column="34" lean-forward="false" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RequestContext.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springboot-split-table-facade/src/main/java/com/gwg/demo/interceptor/RequestContext.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ThreadLocalManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springboot-split-table-facade/src/main/java/com/gwg/demo/interceptor/ThreadLocalManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserDTO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springboot-split-table-facade-stub/src/main/java/com/gwg/demo/dto/UserDTO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -183,20 +169,20 @@
         <option value="$PROJECT_DIR$/springboot-split-table-facade-stub/src/main/java/com/gwg/demo/request/EnterStockRequest.java" />
         <option value="$PROJECT_DIR$/springboot-split-table-facade/src/main/java/com/gwg/demo/interceptor/ThreadLocalManager.java" />
         <option value="$PROJECT_DIR$/springboot-split-table-facade/src/main/java/com/gwg/demo/interceptor/RequestContext.java" />
-        <option value="$PROJECT_DIR$/springboot-split-table-facade-stub/src/main/java/com/gwg/demo/dto/UserDTO.java" />
         <option value="$PROJECT_DIR$/springboot-split-table-facade/src/main/java/com/gwg/demo/interceptor/GenericRequestFilter.java" />
-        <option value="$PROJECT_DIR$/springboot-split-table-facade/src/main/java/com/gwg/demo/interceptor/GenericRequestInterceptor.java" />
         <option value="$PROJECT_DIR$/springboot-split-table-facade/src/main/java/com/gwg/demo/config/WebMvcConfig.java" />
         <option value="$PROJECT_DIR$/springboot-split-table-service/src/main/java/com/gwg/demo/service/impl/EnterStockServiceImpl.java" />
         <option value="$PROJECT_DIR$/springboot-split-table-common/src/main/java/com/gwg/orm/util/StringUtil.java" />
         <option value="$PROJECT_DIR$/springboot-split-table-common/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-split-table-common/src/main/java/com/gwg/orm/util/Assert.java" />
         <option value="$PROJECT_DIR$/springboot-split-table-common/src/main/java/com/gwg/orm/util/OrderNoUtil.java" />
-        <option value="$PROJECT_DIR$/脚本.sql" />
         <option value="$PROJECT_DIR$/springboot-split-table-facade/src/test/java/com/gwg/test/MathTest.java" />
         <option value="$PROJECT_DIR$/springboot-split-table-common/src/main/java/com/gwg/orm/shardingjdbc/SimpleShardingAlgorithm.java" />
         <option value="$PROJECT_DIR$/springboot-split-table-common/src/main/java/com/gwg/orm/shardingjdbc/GroupShardingAlgorithm.java" />
         <option value="$PROJECT_DIR$/springboot-split-table-facade/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/springboot-split-table-facade-stub/src/main/java/com/gwg/demo/dto/UserDTO.java" />
+        <option value="$PROJECT_DIR$/springboot-split-table-facade/src/main/java/com/gwg/demo/interceptor/GenericRequestInterceptor.java" />
+        <option value="$PROJECT_DIR$/脚本.sql" />
       </list>
     </option>
   </component>
@@ -291,87 +277,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springboot-split-table-improvement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboot-split-table-improvement" type="462c0819:PsiDirectoryNode" />
-              <item name="springboot-split-table-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="autoconfigure" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springboot-split-table-improvement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboot-split-table-improvement" type="462c0819:PsiDirectoryNode" />
-              <item name="springboot-split-table-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="configuration" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springboot-split-table-improvement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboot-split-table-improvement" type="462c0819:PsiDirectoryNode" />
-              <item name="springboot-split-table-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="env" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springboot-split-table-improvement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboot-split-table-improvement" type="462c0819:PsiDirectoryNode" />
-              <item name="springboot-split-table-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springboot-split-table-improvement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboot-split-table-improvement" type="462c0819:PsiDirectoryNode" />
-              <item name="springboot-split-table-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="help" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springboot-split-table-improvement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboot-split-table-improvement" type="462c0819:PsiDirectoryNode" />
-              <item name="springboot-split-table-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="properties" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springboot-split-table-improvement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboot-split-table-improvement" type="462c0819:PsiDirectoryNode" />
-              <item name="springboot-split-table-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sequence" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springboot-split-table-improvement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboot-split-table-improvement" type="462c0819:PsiDirectoryNode" />
-              <item name="springboot-split-table-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="shardingjdbc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springboot-split-table-improvement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboot-split-table-improvement" type="462c0819:PsiDirectoryNode" />
-              <item name="springboot-split-table-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="springboot-split-table-improvement" type="b2602c69:ProjectViewProjectNode" />
@@ -869,8 +774,16 @@
       <workItem from="1565334386948" duration="1143000" />
       <workItem from="1565335558738" duration="6075000" />
       <workItem from="1565572810877" duration="4045000" />
-      <workItem from="1565576904235" duration="12117000" />
+      <workItem from="1565576904235" duration="12304000" />
     </task>
+    <task id="LOCAL-00001" summary="优化">
+      <created>1565601317796</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1565601317796</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -903,7 +816,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25014000" />
+    <option name="totallyTimeSpent" value="25201000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -928,7 +841,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30232558" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46912244" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1913646" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17857143" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.06335797" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1021,31 +934,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/springboot-split-table-common/src/main/java/com/gwg/orm/util/FileUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-split-table-common/src/main/java/com/gwg/orm/util/RSAUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="30" column="7" lean-forward="false" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-split-table-facade-stub/src/test/java/com/gwg/demo/service/test/EnterStockServiceTest.java" />
-    <entry file="file://$PROJECT_DIR$/springboot-split-table-service/src/main/java/com/gwg/demo/service/EnterStockService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="68" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/springboot-split-table-service/src/main/java/com/gwg/demo/service/impl/EnterStockServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1438,22 +1326,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/脚本.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="140" lean-forward="false" selection-start-line="13" selection-start-column="62" selection-end-line="13" selection-end-column="140" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-split-table-facade/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="56" column="54" lean-forward="false" selection-start-line="56" selection-start-column="48" selection-end-line="56" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/springboot-split-table-common/src/main/java/com/gwg/orm/shardingjdbc/GroupShardingAlgorithm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="490">
@@ -1473,19 +1345,67 @@
     <entry file="file://$PROJECT_DIR$/springboot-split-table-common/src/main/java/com/gwg/orm/util/OrderNoUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/springboot-split-table-common/src/main/java/com/gwg/orm/shardingjdbc/SimpleShardingAlgorithm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-969">
-          <caret line="18" column="36" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="36" />
+        <state relative-caret-position="544">
+          <caret line="115" column="92" lean-forward="false" selection-start-line="115" selection-start-column="92" selection-end-line="115" selection-end-column="92" />
           <folding>
             <element signature="e#984#985#0" expanded="true" />
             <element signature="e#1028#1029#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-split-table-facade/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="56" column="54" lean-forward="false" selection-start-line="56" selection-start-column="48" selection-end-line="56" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-split-table-facade-stub/src/main/java/com/gwg/demo/dto/UserDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-split-table-facade/src/main/java/com/gwg/demo/interceptor/RequestContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-split-table-facade/src/main/java/com/gwg/demo/interceptor/ThreadLocalManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-split-table-facade/src/main/java/com/gwg/demo/interceptor/GenericRequestInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="22" column="34" lean-forward="false" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/脚本.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
