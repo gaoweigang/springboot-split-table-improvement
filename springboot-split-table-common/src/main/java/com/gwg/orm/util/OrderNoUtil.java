@@ -7,7 +7,8 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.Random;
 
 /**
- * 订单生成工具: 时间戳+userId后4位+4位随机数
+ * 订单生成工具: 时间戳(13位)+userId后4位+4位随机数，但是这样生成的订单号orderNo有21位
+ * 为了缩短订单号长度，可以可以时间戳后8位，这个订单号长度就只有16位了
  */
 public class OrderNoUtil {
 

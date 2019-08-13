@@ -16,7 +16,7 @@ USE supermarket_00;
 
 CREATE TABLE zto_enter_stock_0000 (
   id bigint(32) NOT NULL AUTO_INCREMENT COMMENT '主键',
-  bill_code varchar(20) NOT NULL COMMENT '单号',
+  bill_code varchar(32) NOT NULL COMMENT '单号：时间戳+用户ID后4位+4位随机数',
   depot_code varchar(16) NOT NULL COMMENT '形象店编号',
   take_code varchar(12) NOT NULL COMMENT '取件码',
   upload_date datetime NOT NULL COMMENT '入库时间',
@@ -31,7 +31,7 @@ CREATE TABLE zto_enter_stock_0000 (
 
 CREATE TABLE zto_enter_stock_0001 (
   id bigint(32) NOT NULL AUTO_INCREMENT COMMENT '主键',
-  bill_code varchar(20) NOT NULL COMMENT '单号',
+  bill_code varchar(32) NOT NULL COMMENT '单号：时间戳+用户ID后4位+4位随机数',
   depot_code varchar(16) NOT NULL COMMENT '形象店编号',
   take_code varchar(12) NOT NULL COMMENT '取件码',
   upload_date datetime NOT NULL COMMENT '入库时间',
@@ -44,36 +44,9 @@ CREATE TABLE zto_enter_stock_0001 (
   UNIQUE KEY BILLCODE_DEPOTCODE_COMPANYCODE_UNIQUE (bill_code, depot_code, express_company_code) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-
-INSERT INTO `zto_enter_stock_0000` VALUES (532644473478, '441872351078', 'ZT0211343', '146001', '2017-6-14 10:59:29', 'ZTO', 6, '汤弘', '15618786706', NULL);
-INSERT INTO `zto_enter_stock_0000` VALUES (532644473479, '534906509120', 'ZT0211343', '146002', '2017-6-14 11:00:26', 'ZTO', 6, '蔡懿雯', '13918074924', NULL);
-INSERT INTO `zto_enter_stock_0000` VALUES (532644473480, '441844037882', 'ZT0211343', '146003', '2017-6-14 11:01:33', 'ZTO', 6, '王磊', '17701689864', NULL);
-INSERT INTO `zto_enter_stock_0000` VALUES (532644473481, '441877316648', 'ZT0211343', '146004', '2017-6-14 11:02:08', 'ZTO', 6, '徐江', '15001878650', NULL);
-INSERT INTO `zto_enter_stock_0000` VALUES (532644473482, '441779426266', 'ZT0211343', '146005', '2017-6-14 11:02:41', 'ZTO', 6, '徐江', '15001878650', NULL);
-INSERT INTO `zto_enter_stock_0000` VALUES (532644473483, '763020784793', 'ZT0211343', '146006', '2017-6-14 11:03:16', 'ZTO', 6, '姜姜', '18702128863', NULL);
-INSERT INTO `zto_enter_stock_0000` VALUES (532644473484, '441839737636', 'ZT0211343', '146007', '2017-6-14 11:03:55', 'ZTO', 6, '吴思诚', '13917201018', NULL);
-INSERT INTO `zto_enter_stock_0000` VALUES (532644473485, '441943628033', 'ZT0211343', '146008', '2017-6-14 11:04:31', 'ZTO', 6, '胡***', '13454036610', NULL);
-INSERT INTO `zto_enter_stock_0000` VALUES (532644473486, '534928381157', 'ZT0211343', '146009', '2017-6-14 11:05:04', 'ZTO', 6, '陈俊颖', '15201936519', NULL);
-INSERT INTO `zto_enter_stock_0000` VALUES (532644473487, '441900318543', 'ZT0211343', '146010', '2017-6-14 11:06:11', 'ZTO', 6, '朱家希', '13661459557', NULL);
-
-INSERT INTO `zto_enter_stock_0001` VALUES (532644474758, '445485670653', 'ZT39284326400', '136001', '2017-7-13 14:55:07', 'ZTO', 6, '肖***', '18338560136', NULL);
-INSERT INTO `zto_enter_stock_0001` VALUES (532644474759, '445355597794', 'ZT39284326400', '136002', '2017-7-13 14:55:31', 'ZTO', 6, '陈***', '15286894378', NULL);
-INSERT INTO `zto_enter_stock_0001` VALUES (532644474760, '445499327311', 'ZT39284326400', '136003', '2017-7-13 14:56:41', 'ZTO', 6, '罗***', '18790373380', NULL);
-INSERT INTO `zto_enter_stock_0001` VALUES (532644474761, '535273202095', 'ZT39284326400', '136004', '2017-7-13 14:58:08', 'ZTO', 6, '明哥', '13249170438', NULL);
-INSERT INTO `zto_enter_stock_0001` VALUES (532644474762, '535273202106', 'ZT39284326400', '136005', '2017-7-13 14:58:24', 'ZTO', 6, '明哥', '13249170438', NULL);
-INSERT INTO `zto_enter_stock_0001` VALUES (532644474763, '445450671515', 'ZT39284326400', '136006', '2017-7-13 14:58:57', 'ZTO', 6, '周***', '13663963741', NULL);
-INSERT INTO `zto_enter_stock_0001` VALUES (532644474764, '445506473203', 'ZT39284326400', '136007', '2017-7-13 14:59:31', 'ZTO', 6, '李***', '13526390848', NULL);
-INSERT INTO `zto_enter_stock_0001` VALUES (532644474765, '445531109460', 'ZT39284326400', '136008', '2017-7-13 15:00:17', 'ZTO', 6, '徐***', '18739605409', NULL);
-INSERT INTO `zto_enter_stock_0001` VALUES (532644474767, '445662677346', 'ZT39284326400', '136009', '2017-7-13 15:01:38', 'ZTO', 6, '刘***', '17760241035', NULL);
-INSERT INTO `zto_enter_stock_0001` VALUES (532644474769, '445547646096', 'ZT39284326400', '136010', '2017-7-13 15:02:05', 'ZTO', 6, '韩***', '18436023659', NULL);
-
-
---切换到分区 supermarket_01
-USE supermarket_01;
-
 CREATE TABLE zto_enter_stock_0002 (
   id bigint(32) NOT NULL AUTO_INCREMENT COMMENT '主键',
-  bill_code varchar(20) NOT NULL COMMENT '单号',
+  bill_code varchar(32) NOT NULL COMMENT '单号：时间戳+用户ID后4位+4位随机数',
   depot_code varchar(16) NOT NULL COMMENT '形象店编号',
   take_code varchar(12) NOT NULL COMMENT '取件码',
   upload_date datetime NOT NULL COMMENT '入库时间',
@@ -88,7 +61,7 @@ CREATE TABLE zto_enter_stock_0002 (
 
 CREATE TABLE zto_enter_stock_0003 (
   id bigint(32) NOT NULL AUTO_INCREMENT COMMENT '主键',
-  bill_code varchar(20) NOT NULL COMMENT '单号',
+  bill_code varchar(32) NOT NULL COMMENT '单号：时间戳+用户ID后4位+4位随机数',
   depot_code varchar(16) NOT NULL COMMENT '形象店编号',
   take_code varchar(12) NOT NULL COMMENT '取件码',
   upload_date datetime NOT NULL COMMENT '入库时间',
@@ -102,36 +75,78 @@ CREATE TABLE zto_enter_stock_0003 (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-INSERT INTO `zto_enter_stock_0002` VALUES (532644474878, '780064696670', 'ZT39284326402', '136001', '2017-7-13 16:12:55', 'ZTO', 6, '舒玉琴', '17739664736', NULL);
-INSERT INTO `zto_enter_stock_0002` VALUES (532644474988, '445596402462', 'ZT39284326402', '146001', '2017-7-14 16:23:44', 'ZTO', 6, '李***', '18272961236', NULL);
-INSERT INTO `zto_enter_stock_0002` VALUES (532644475652, '445834247382', 'ZT39284326402', '166001', '2017-7-16 14:28:26', 'ZTO', 6, '李***', '18272961236', NULL);
-INSERT INTO `zto_enter_stock_0002` VALUES (532644475653, '445857017653', 'ZT39284326402', '166002', '2017-7-16 14:32:07', 'ZTO', 6, '燕子', '17839611746', NULL);
-INSERT INTO `zto_enter_stock_0002` VALUES (532644475654, '445761301671', 'ZT39284326402', '166003', '2017-7-16 14:33:41', 'ZTO', 6, '高***', '18239621041', NULL);
-INSERT INTO `zto_enter_stock_0002` VALUES (532644475655, '445654681531', 'ZT39284326402', '166004', '2017-7-16 14:34:06', 'ZTO', 6, '陈***', '15939681386', NULL);
-INSERT INTO `zto_enter_stock_0002` VALUES (532644475656, '445785482363', 'ZT39284326402', '166005', '2017-7-16 14:34:33', 'ZTO', 6, '智***', '15189822705', NULL);
-INSERT INTO `zto_enter_stock_0002` VALUES (532644475657, '535431528846', 'ZT39284326402', '166006', '2017-7-16 14:35:03', 'ZTO', 6, '梁倩', '17737020592', NULL);
-INSERT INTO `zto_enter_stock_0002` VALUES (532644475658, '445924120369', 'ZT39284326402', '166007', '2017-7-16 14:40:39', 'ZTO', 6, '李***', '15890806708', NULL);
-INSERT INTO `zto_enter_stock_0002` VALUES (532644475659, '445860575542', 'ZT39284326402', '166008', '2017-7-16 14:41:06', 'ZTO', 6, '郭***', '15713652927', NULL);
 
+--切换到分区 supermarket_01
+USE supermarket_01;
 
-INSERT INTO `zto_enter_stock_0003` VALUES (5326522852810, '472613467022', 'ZT39284326403', '016001', '2018-1-1 16:39:55', 'ZTO', 6, '危晓丹', '15639613081', NULL);
-INSERT INTO `zto_enter_stock_0003` VALUES (5326522852905, '540074336643', 'ZT39284326403', '016002', '2018-1-1 16:40:01', 'ZTO', 6, '', '15138144293', NULL);
-INSERT INTO `zto_enter_stock_0003` VALUES (5326522852985, '539301708873', 'ZT39284326403', '016003', '2018-1-1 16:40:07', 'ZTO', 6, '危晓丹', '18407631186', NULL);
-INSERT INTO `zto_enter_stock_0003` VALUES (5326522853372, '472613436886', 'ZT39284326403', '016004', '2018-1-1 16:40:27', 'ZTO', 6, '谢**', '15639613081', NULL);
-INSERT INTO `zto_enter_stock_0003` VALUES (5326522853519, '472647992310', 'ZT39284326403', '016005', '2018-1-1 16:40:37', 'ZTO', 6, '', '13223967086', NULL);
-INSERT INTO `zto_enter_stock_0003` VALUES (5326522853892, '472626948321', 'ZT39284326403', '016006', '2018-1-1 16:40:55', 'ZTO', 6, '甘**', '13087088932', NULL);
-INSERT INTO `zto_enter_stock_0003` VALUES (5326522854238, '472637450135', 'ZT39284326403', '016007', '2018-1-1 16:41:09', 'ZTO', 6, '李**', '13271730335', NULL);
-INSERT INTO `zto_enter_stock_0003` VALUES (5326522854307, '719913798227', 'ZT39284326403', '016008', '2018-1-1 16:41:15', 'ZTO', 6, '', '13223967086', NULL);
-INSERT INTO `zto_enter_stock_0003` VALUES (5326522854449, '472714493053', 'ZT39284326403', '016009', '2018-1-1 16:41:26', 'ZTO', 6, '雷**', '18838985497', NULL);
-INSERT INTO `zto_enter_stock_0003` VALUES (5326522854641, '472374672344', 'ZT39284326403', '016010', '2018-1-1 16:41:38', 'ZTO', 6, '', '15639602013', NULL);
+CREATE TABLE zto_enter_stock_0000 (
+  id bigint(32) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  bill_code varchar(32) NOT NULL COMMENT '单号：时间戳+用户ID后4位+4位随机数',
+  depot_code varchar(16) NOT NULL COMMENT '形象店编号',
+  take_code varchar(12) NOT NULL COMMENT '取件码',
+  upload_date datetime NOT NULL COMMENT '入库时间',
+  express_company_code varchar(16) NOT NULL COMMENT '快递公司编号',
+  express_type int(10) NOT NULL DEFAULT '6' COMMENT '快件类型',
+  receive_man varchar(64) DEFAULT NULL COMMENT '收件人姓名',
+  receive_man_mobile varchar(64) DEFAULT NULL COMMENT '收件人联系方式',
+  receive_man_addr varchar(1024) DEFAULT NULL COMMENT '收件人地址',
+  PRIMARY KEY (id),
+  UNIQUE KEY BILLCODE_DEPOTCODE_COMPANYCODE_UNIQUE (bill_code, depot_code, express_company_code) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE zto_enter_stock_0001 (
+  id bigint(32) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  bill_code varchar(32) NOT NULL COMMENT '单号：时间戳+用户ID后4位+4位随机数',
+  depot_code varchar(16) NOT NULL COMMENT '形象店编号',
+  take_code varchar(12) NOT NULL COMMENT '取件码',
+  upload_date datetime NOT NULL COMMENT '入库时间',
+  express_company_code varchar(16) NOT NULL COMMENT '快递公司编号',
+  express_type int(10) NOT NULL DEFAULT '6' COMMENT '快件类型',
+  receive_man varchar(64) DEFAULT NULL COMMENT '收件人姓名',
+  receive_man_mobile varchar(64) DEFAULT NULL COMMENT '收件人联系方式',
+  receive_man_addr varchar(1024) DEFAULT NULL COMMENT '收件人地址',
+  PRIMARY KEY (id),
+  UNIQUE KEY BILLCODE_DEPOTCODE_COMPANYCODE_UNIQUE (bill_code, depot_code, express_company_code) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE zto_enter_stock_0002 (
+  id bigint(32) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  bill_code varchar(32) NOT NULL COMMENT '单号：时间戳+用户ID后4位+4位随机数',
+  depot_code varchar(16) NOT NULL COMMENT '形象店编号',
+  take_code varchar(12) NOT NULL COMMENT '取件码',
+  upload_date datetime NOT NULL COMMENT '入库时间',
+  express_company_code varchar(16) NOT NULL COMMENT '快递公司编号',
+  express_type int(10) NOT NULL DEFAULT '6' COMMENT '快件类型',
+  receive_man varchar(64) DEFAULT NULL COMMENT '收件人姓名',
+  receive_man_mobile varchar(64) DEFAULT NULL COMMENT '收件人联系方式',
+  receive_man_addr varchar(1024) DEFAULT NULL COMMENT '收件人地址',
+  PRIMARY KEY (id),
+  UNIQUE KEY BILLCODE_DEPOTCODE_COMPANYCODE_UNIQUE (bill_code, depot_code, express_company_code) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE zto_enter_stock_0003 (
+  id bigint(32) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  bill_code varchar(32) NOT NULL COMMENT '单号：时间戳+用户ID后4位+4位随机数',
+  depot_code varchar(16) NOT NULL COMMENT '形象店编号',
+  take_code varchar(12) NOT NULL COMMENT '取件码',
+  upload_date datetime NOT NULL COMMENT '入库时间',
+  express_company_code varchar(16) NOT NULL COMMENT '快递公司编号',
+  express_type int(10) NOT NULL DEFAULT '6' COMMENT '快件类型',
+  receive_man varchar(64) DEFAULT NULL COMMENT '收件人姓名',
+  receive_man_mobile varchar(64) DEFAULT NULL COMMENT '收件人联系方式',
+  receive_man_addr varchar(1024) DEFAULT NULL COMMENT '收件人地址',
+  PRIMARY KEY (id),
+  UNIQUE KEY BILLCODE_DEPOTCODE_COMPANYCODE_UNIQUE (bill_code, depot_code, express_company_code) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
 
 --切换到分区 supermarket_02
 USE supermarket_02;
 
-CREATE TABLE zto_enter_stock_0004 (
+CREATE TABLE zto_enter_stock_0000 (
   id bigint(32) NOT NULL AUTO_INCREMENT COMMENT '主键',
-  bill_code varchar(20) NOT NULL COMMENT '单号',
+  bill_code varchar(32) NOT NULL COMMENT '单号：时间戳+用户ID后4位+4位随机数',
   depot_code varchar(16) NOT NULL COMMENT '形象店编号',
   take_code varchar(12) NOT NULL COMMENT '取件码',
   upload_date datetime NOT NULL COMMENT '入库时间',
@@ -144,9 +159,39 @@ CREATE TABLE zto_enter_stock_0004 (
   UNIQUE KEY BILLCODE_DEPOTCODE_COMPANYCODE_UNIQUE (bill_code, depot_code, express_company_code) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE zto_enter_stock_0005 (
+CREATE TABLE zto_enter_stock_0001 (
   id bigint(32) NOT NULL AUTO_INCREMENT COMMENT '主键',
-  bill_code varchar(20) NOT NULL COMMENT '单号',
+  bill_code varchar(32) NOT NULL COMMENT '单号：时间戳+用户ID后4位+4位随机数',
+  depot_code varchar(16) NOT NULL COMMENT '形象店编号',
+  take_code varchar(12) NOT NULL COMMENT '取件码',
+  upload_date datetime NOT NULL COMMENT '入库时间',
+  express_company_code varchar(16) NOT NULL COMMENT '快递公司编号',
+  express_type int(10) NOT NULL DEFAULT '6' COMMENT '快件类型',
+  receive_man varchar(64) DEFAULT NULL COMMENT '收件人姓名',
+  receive_man_mobile varchar(64) DEFAULT NULL COMMENT '收件人联系方式',
+  receive_man_addr varchar(1024) DEFAULT NULL COMMENT '收件人地址',
+  PRIMARY KEY (id),
+  UNIQUE KEY BILLCODE_DEPOTCODE_COMPANYCODE_UNIQUE (bill_code, depot_code, express_company_code) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE zto_enter_stock_0002 (
+  id bigint(32) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  bill_code varchar(32) NOT NULL COMMENT '单号：时间戳+用户ID后4位+4位随机数',
+  depot_code varchar(16) NOT NULL COMMENT '形象店编号',
+  take_code varchar(12) NOT NULL COMMENT '取件码',
+  upload_date datetime NOT NULL COMMENT '入库时间',
+  express_company_code varchar(16) NOT NULL COMMENT '快递公司编号',
+  express_type int(10) NOT NULL DEFAULT '6' COMMENT '快件类型',
+  receive_man varchar(64) DEFAULT NULL COMMENT '收件人姓名',
+  receive_man_mobile varchar(64) DEFAULT NULL COMMENT '收件人联系方式',
+  receive_man_addr varchar(1024) DEFAULT NULL COMMENT '收件人地址',
+  PRIMARY KEY (id),
+  UNIQUE KEY BILLCODE_DEPOTCODE_COMPANYCODE_UNIQUE (bill_code, depot_code, express_company_code) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE zto_enter_stock_0003 (
+  id bigint(32) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  bill_code varchar(32) NOT NULL COMMENT '单号：时间戳+用户ID后4位+4位随机数',
   depot_code varchar(16) NOT NULL COMMENT '形象店编号',
   take_code varchar(12) NOT NULL COMMENT '取件码',
   upload_date datetime NOT NULL COMMENT '入库时间',
@@ -160,36 +205,15 @@ CREATE TABLE zto_enter_stock_0005 (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-INSERT INTO `zto_enter_stock_0004` VALUES (532648670069, '457336028899', 'ZT39284326376', '126001', '2017-10-12 16:06:56', 'ZTO', 6, '席*', '13137286988', NULL);
-INSERT INTO `zto_enter_stock_0004` VALUES (532648674449, '457637790661', 'ZT39284326376', '126002', '2017-10-12 16:18:40', 'ZTO', 6, '庄狄梦', '15836727918', NULL);
-INSERT INTO `zto_enter_stock_0004` VALUES (532648674468, '536830993780', 'ZT39284326376', '126003', '2017-10-12 16:18:43', 'ZTO', 6, '庄狄梦', '15514496605', NULL);
-INSERT INTO `zto_enter_stock_0004` VALUES (532648674554, '457420601577', 'ZT39284326376', '126004', '2017-10-12 16:19:04', 'ZTO', 6, '胡**', '15514797011', NULL);
-INSERT INTO `zto_enter_stock_0004` VALUES (532648674826, '457665140086', 'ZT39284326376', '126005', '2017-10-12 16:19:52', 'ZTO', 6, '', '15276263088', NULL);
-INSERT INTO `zto_enter_stock_0004` VALUES (532648674862, '457567006751', 'ZT39284326376', '126006', '2017-10-12 16:20:01', 'ZTO', 6, '柳**', '18037854659', NULL);
-INSERT INTO `zto_enter_stock_0004` VALUES (532648674942, '457262862056', 'ZT39284326376', '126007', '2017-10-12 16:20:12', 'ZTO', 6, '杨**', '13783361802', NULL);
-INSERT INTO `zto_enter_stock_0004` VALUES (532648675063, '457517549410', 'ZT39284326376', '126008', '2017-10-12 16:20:24', 'ZTO', 6, '史**', '18790313193', NULL);
-INSERT INTO `zto_enter_stock_0004` VALUES (532648675096, '457498602120', 'ZT39284326376', '126009', '2017-10-12 16:20:33', 'ZTO', 6, '赵**', '18864258017', NULL);
-INSERT INTO `zto_enter_stock_0004` VALUES (532648675156, '780067617235', 'ZT39284326376', '126010', '2017-10-12 16:20:44', 'ZTO', 6, '', '15503965408', NULL);
-
-INSERT INTO `zto_enter_stock_0005` VALUES (532644474879, '445490288812', 'ZT39284326377', '136001', '2017-7-13 16:16:26', 'ZTO', 6, '翟***', '15836668735', NULL);
-INSERT INTO `zto_enter_stock_0005` VALUES (532648645580, '457646802183', 'ZT39284326377', '126001', '2017-10-12 14:49:28', 'ZTO', 6, NULL, '17737777870', NULL);
-INSERT INTO `zto_enter_stock_0005` VALUES (532648645793, '457683897107', 'ZT39284326377', '126002', '2017-10-12 14:50:05', 'ZTO', 6, NULL, '17737777870', NULL);
-INSERT INTO `zto_enter_stock_0005` VALUES (532648645952, '457645697793', 'ZT39284326377', '126003', '2017-10-12 14:50:35', 'ZTO', 6, NULL, '15539600558', NULL);
-INSERT INTO `zto_enter_stock_0005` VALUES (532648646078, '457627097876', 'ZT39284326377', '126004', '2017-10-12 14:51:10', 'ZTO', 6, NULL, '13533687075', NULL);
-INSERT INTO `zto_enter_stock_0005` VALUES (532649132083, '458031000591', 'ZT39284326377', '146001', '2017-10-14 16:54:05', 'ZTO', 6, '', '15188571560', NULL);
-INSERT INTO `zto_enter_stock_0005` VALUES (532649132266, '458008689488', 'ZT39284326377', '146002', '2017-10-14 16:54:36', 'ZTO', 6, '', '13783346998', NULL);
-INSERT INTO `zto_enter_stock_0005` VALUES (532649132421, '457752728529', 'ZT39284326377', '146003', '2017-10-14 16:55:03', 'ZTO', 6, '王毛孩', '13507664192', NULL);
-INSERT INTO `zto_enter_stock_0005` VALUES (532649132452, '457979985246', 'ZT39284326377', '146004', '2017-10-14 16:55:11', 'ZTO', 6, '赵丹', '18300782422', NULL);
-INSERT INTO `zto_enter_stock_0005` VALUES (532649132565, '457806990258', 'ZT39284326377', '146005', '2017-10-14 16:55:19', 'ZTO', 6, '周满意', '15286872127', NULL);
 
 
 
 --切换到分区 supermarket_03
 USE supermarket_03;
 
-CREATE TABLE zto_enter_stock_0006 (
+CREATE TABLE zto_enter_stock_0000 (
   id bigint(32) NOT NULL AUTO_INCREMENT COMMENT '主键',
-  bill_code varchar(20) NOT NULL COMMENT '单号',
+  bill_code varchar(32) NOT NULL COMMENT '单号：时间戳+用户ID后4位+4位随机数',
   depot_code varchar(16) NOT NULL COMMENT '形象店编号',
   take_code varchar(12) NOT NULL COMMENT '取件码',
   upload_date datetime NOT NULL COMMENT '入库时间',
@@ -202,9 +226,9 @@ CREATE TABLE zto_enter_stock_0006 (
   UNIQUE KEY BILLCODE_DEPOTCODE_COMPANYCODE_UNIQUE (bill_code, depot_code, express_company_code) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE zto_enter_stock_0007 (
+CREATE TABLE zto_enter_stock_0001 (
   id bigint(32) NOT NULL AUTO_INCREMENT COMMENT '主键',
-  bill_code varchar(20) NOT NULL COMMENT '单号',
+  bill_code varchar(32) NOT NULL COMMENT '单号：时间戳+用户ID后4位+4位随机数',
   depot_code varchar(16) NOT NULL COMMENT '形象店编号',
   take_code varchar(12) NOT NULL COMMENT '取件码',
   upload_date datetime NOT NULL COMMENT '入库时间',
@@ -217,26 +241,33 @@ CREATE TABLE zto_enter_stock_0007 (
   UNIQUE KEY BILLCODE_DEPOTCODE_COMPANYCODE_UNIQUE (bill_code, depot_code, express_company_code) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+CREATE TABLE zto_enter_stock_0002 (
+  id bigint(32) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  bill_code varchar(32) NOT NULL COMMENT '单号：时间戳+用户ID后4位+4位随机数',
+  depot_code varchar(16) NOT NULL COMMENT '形象店编号',
+  take_code varchar(12) NOT NULL COMMENT '取件码',
+  upload_date datetime NOT NULL COMMENT '入库时间',
+  express_company_code varchar(16) NOT NULL COMMENT '快递公司编号',
+  express_type int(10) NOT NULL DEFAULT '6' COMMENT '快件类型',
+  receive_man varchar(64) DEFAULT NULL COMMENT '收件人姓名',
+  receive_man_mobile varchar(64) DEFAULT NULL COMMENT '收件人联系方式',
+  receive_man_addr varchar(1024) DEFAULT NULL COMMENT '收件人地址',
+  PRIMARY KEY (id),
+  UNIQUE KEY BILLCODE_DEPOTCODE_COMPANYCODE_UNIQUE (bill_code, depot_code, express_company_code) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `zto_enter_stock_0006` VALUES (532644475041, '445540732664', 'ZT39284326378', '146001', '2017-7-14 17:12:56', 'ZTO', 6, '晏晓同', '13939690810', NULL);
-INSERT INTO `zto_enter_stock_0006` VALUES (532644476537, '765179398326', 'ZT39284326378', '186001', '2017-7-18 16:39:08', 'ZTO', 6, '闵香云', '13123790968', NULL);
-INSERT INTO `zto_enter_stock_0006` VALUES (532644476538, '445905878398', 'ZT39284326378', '186002', '2017-7-18 16:39:30', 'ZTO', 6, '徐***', '18839607725', NULL);
-INSERT INTO `zto_enter_stock_0006` VALUES (532644476539, '446011479702', 'ZT39284326378', '186003', '2017-7-18 16:39:47', 'ZTO', 6, '孟祥琴', '13461883938', NULL);
-INSERT INTO `zto_enter_stock_0006` VALUES (532644476540, '446044434495', 'ZT39284326378', '186004', '2017-7-18 16:40:02', 'ZTO', 6, '晏成伟', '13137267221', NULL);
-INSERT INTO `zto_enter_stock_0006` VALUES (532644476541, '446068258774', 'ZT39284326378', '186005', '2017-7-18 16:40:16', 'ZTO', 6, '杨***', '15038435178', NULL);
-INSERT INTO `zto_enter_stock_0006` VALUES (532644476542, '446111906386', 'ZT39284326378', '186006', '2017-7-18 16:40:30', 'ZTO', 6, '姚***', '18625309180', NULL);
-INSERT INTO `zto_enter_stock_0006` VALUES (532644476543, '701242118286', 'ZT39284326378', '186007', '2017-7-18 16:40:52', 'ZTO', 6, '******', '18623968763', NULL);
-INSERT INTO `zto_enter_stock_0006` VALUES (532644476544, '445980605904', 'ZT39284326378', '186008', '2017-7-18 16:41:04', 'ZTO', 6, '王***', '15836692131', NULL);
-INSERT INTO `zto_enter_stock_0006` VALUES (532644476545, '535424609867', 'ZT39284326378', '186009', '2017-7-18 16:41:17', 'ZTO', 6, '潘芸', '18661176581', NULL);
-
-INSERT INTO `zto_enter_stock_0007` VALUES (532644908518, '451375244666', 'ZT39284326380', '306001', '2017-8-30 16:32:49', 'ZTO', 6, '金***', '18739634280', NULL);
-INSERT INTO `zto_enter_stock_0007` VALUES (532644908549, '451201317030', 'ZT39284326380', '306002', '2017-8-30 16:33:27', 'ZTO', 6, '徐***', '18739621501', NULL);
-INSERT INTO `zto_enter_stock_0007` VALUES (532644908562, '451153486848', 'ZT39284326380', '306003', '2017-8-30 16:33:53', 'ZTO', 6, '张***', '17398900223', NULL);
-INSERT INTO `zto_enter_stock_0007` VALUES (532644908585, '451188135456', 'ZT39284326380', '306004', '2017-8-30 16:34:11', 'ZTO', 6, '任***', '13424334658', NULL);
-INSERT INTO `zto_enter_stock_0007` VALUES (532644908594, '451346265966', 'ZT39284326380', '306005', '2017-8-30 16:34:25', 'ZTO', 6, '刘***', '13814928557', NULL);
-INSERT INTO `zto_enter_stock_0007` VALUES (532644908609, '451177929824', 'ZT39284326380', '306006', '2017-8-30 16:34:37', 'ZTO', 6, '赵***', '13683882714', NULL);
-INSERT INTO `zto_enter_stock_0007` VALUES (532644908617, '535786437176', 'ZT39284326380', '306007', '2017-8-30 16:34:47', 'ZTO', 6, '邹强', '15836657837', NULL);
-INSERT INTO `zto_enter_stock_0007` VALUES (532644908635, '451380200424', 'ZT39284326380', '306008', '2017-8-30 16:35:19', 'ZTO', 6, '周***', '18785998122', NULL);
-INSERT INTO `zto_enter_stock_0007` VALUES (532644908663, '451164984936', 'ZT39284326380', '306009', '2017-8-30 16:36:02', 'ZTO', 6, '吴***', '18839627368', NULL);
-INSERT INTO `zto_enter_stock_0007` VALUES (532644908667, '451313040003', 'ZT39284326380', '306010', '2017-8-30 16:36:12', 'ZTO', 6, '叶***', '18272986783', NULL);
+CREATE TABLE zto_enter_stock_0003 (
+  id bigint(32) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  bill_code varchar(32) NOT NULL COMMENT '单号：时间戳+用户ID后4位+4位随机数',
+  depot_code varchar(16) NOT NULL COMMENT '形象店编号',
+  take_code varchar(12) NOT NULL COMMENT '取件码',
+  upload_date datetime NOT NULL COMMENT '入库时间',
+  express_company_code varchar(16) NOT NULL COMMENT '快递公司编号',
+  express_type int(10) NOT NULL DEFAULT '6' COMMENT '快件类型',
+  receive_man varchar(64) DEFAULT NULL COMMENT '收件人姓名',
+  receive_man_mobile varchar(64) DEFAULT NULL COMMENT '收件人联系方式',
+  receive_man_addr varchar(1024) DEFAULT NULL COMMENT '收件人地址',
+  PRIMARY KEY (id),
+  UNIQUE KEY BILLCODE_DEPOTCODE_COMPANYCODE_UNIQUE (bill_code, depot_code, express_company_code) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

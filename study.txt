@@ -69,23 +69,12 @@ sharding.dataSources[3].maximumPoolSize:50
 
 #第1个被拆分的表的名称
 sharding.tableConfigs[0].name:zto_enter_stock
-sharding.tableConfigs[0].shardingColumn:DEPOT_CODE
-#被拆分的表个数
-sharding.tableConfigs[0].size:8
+sharding.tableConfigs[0].shardingColumn:bill_code
+#每个实例上被拆分的表个数
+sharding.tableConfigs[0].size:4
 sharding.tableConfigs[0].strategy:hash
 
-#第2个被拆分的表的名称
-sharding.tableConfigs[1].name:zto_sms_txn
-sharding.tableConfigs[1].shardingColumn:DEPOT_CODE
-sharding.tableConfigs[1].size:8
-#策略
-sharding.tableConfigs[1].strategy:hash
 
-#第3个被拆分的表的名称
-sharding.tableConfigs[2].name:zto_customer_info
-sharding.tableConfigs[2].shardingColumn:DEPOT_CODE
-sharding.tableConfigs[2].size:8
-sharding.tableConfigs[2].strategy:hash
 
 
 sharding.defaultDSIndex:0

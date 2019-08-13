@@ -1,6 +1,6 @@
-package com.gwg.demo.interceptor;
+package com.gwg.orm.context;
 
-import com.gwg.demo.dto.UserDTO;
+import com.gwg.orm.model.UserDTO;
 import lombok.Data;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

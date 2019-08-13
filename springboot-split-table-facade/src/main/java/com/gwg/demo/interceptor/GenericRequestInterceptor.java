@@ -1,6 +1,7 @@
 package com.gwg.demo.interceptor;
 
-import com.gwg.demo.dto.UserDTO;
+import com.gwg.orm.context.RequestContext;
+import com.gwg.orm.model.UserDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
@@ -18,7 +19,7 @@ public class GenericRequestInterceptor extends HandlerInterceptorAdapter {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        //从redis中获取Session
+        //根据token从redis中获取用户信息
         UserDTO userDTO = new UserDTO();
         userDTO.setUserId("526842");
         userDTO.setUserName("gaoweigang");

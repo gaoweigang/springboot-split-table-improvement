@@ -49,9 +49,9 @@ sharding:
              maximumPoolSize: 50
        tableConfigs[0]:
              name: zto_enter_stock
-             shardingColumn: depot_code
-             size: 12
-             strategy: hash
+             shardingColumn: bill_code
+             #每张库中的表的数量
+             size: 4
        defaultDSIndex: 0
        basePackage: com.gwg.*.mapper
        mapperLocations: classpath*:com/gwg/demo/mapper/*.xml

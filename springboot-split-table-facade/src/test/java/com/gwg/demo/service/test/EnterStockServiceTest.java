@@ -3,7 +3,12 @@ package com.gwg.demo.service.test;
 import com.gwg.demo.model.ZtoEnterStock;
 import com.gwg.demo.request.EnterStockRequest;
 import com.gwg.demo.service.EnterStockService;
+import com.gwg.orm.context.RequestContext;
+import com.gwg.orm.model.UserDTO;
+import com.gwg.orm.util.OrderNoUtil;
+import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.Request;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,6 +42,15 @@ public class EnterStockServiceTest {
 	@Autowired
 	private EnterStockService enterStockService;
 
+	@Before
+	public void before(){
+        //1.模拟用户已登录
+        UserDTO userDTO = new UserDTO();
+        userDTO.setUserId("654442");
+        userDTO.setUserName("gaoweigang");
+        RequestContext.getOrCreate().setUserDTO(userDTO);
+    }
+
 	/**
 	 * 插入数据
 	 */
@@ -44,7 +58,7 @@ public class EnterStockServiceTest {
 	public void testAddEnterStockInfo() throws Exception{
 		EnterStockRequest request = new EnterStockRequest();
 		request.setId(1l);
-		request.setBillCode("445485670653");
+		request.setBillCode("156566103893044424370");
 		request.setDepotCode("ZT39284326400");
 		request.setExpressCompanyCode("EMS");
 		request.setExpressType(1);
@@ -63,8 +77,9 @@ public class EnterStockServiceTest {
 	 */
 	@Test
 	public void testQueryEnterStockInfoByDepotCodeAndBillCode() throws Exception{
+		//用户登录了才能操作
 		EnterStockRequest request = new EnterStockRequest();
-		request.setBillCode("445485670653");
+		request.setBillCode("156566103893044424370");
 		request.setDepotCode("ZT39284326400");
 		LOG.info("查询条件："+request);
 		List<ZtoEnterStock> enterStockList = enterStockService.queryEnterStockByDepotCodeAndBillCode(request);

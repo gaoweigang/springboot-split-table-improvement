@@ -1,4 +1,4 @@
-package com.gwg.demo.dto;
+package com.gwg.orm.model;
 
 import lombok.Data;
 
