@@ -11,6 +11,10 @@ public interface EnterStockDao {
 	
 	public List<ZtoEnterStock> selectEnterStockByDepotCodeAndBillCode(String depotCode, String billCode) throws Exception;
 
+	public List<ZtoEnterStock> selectEnterStockListByBillCode(List<String> billCodeList) throws Exception;
+
 	public boolean insertEnterStockInfo(ZtoEnterStock record) throws Exception;
+
+
 
 }

@@ -3,17 +3,17 @@ package com.gwg.demo;
 
 import java.util.List;
 
+import com.gwg.demo.request.QueryEnterStockReq;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import com.gwg.demo.model.ZtoEnterStock;
 import com.gwg.orm.annotation.EnableShardingJdbc;
-import com.gwg.demo.request.EnterStockRequest;
+import com.gwg.demo.request.AddEnterStockReq;
 import com.gwg.demo.service.EnterStockService;
 /**
  * @author gaoweigang
@@ -41,7 +41,7 @@ public class Application{
 	 */
 	@RequestMapping("/")
 	String home() throws Exception{
-		EnterStockRequest request = new EnterStockRequest();
+		QueryEnterStockReq request = new QueryEnterStockReq();
 		request.setBillCode("445485670653");
 		request.setDepotCode("ZT39284326400");
 		List<ZtoEnterStock> enterStockList = enterStockService.queryEnterStockByDepotCodeAndBillCode(request);

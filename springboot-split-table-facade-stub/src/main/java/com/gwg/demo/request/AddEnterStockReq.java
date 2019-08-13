@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Data
-public class EnterStockRequest implements Serializable{
+public class AddEnterStockReq implements Serializable{
 
 	private Long id;
 	

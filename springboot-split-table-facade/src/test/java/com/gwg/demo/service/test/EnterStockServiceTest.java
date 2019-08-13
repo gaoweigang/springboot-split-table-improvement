@@ -1,14 +1,15 @@
 package com.gwg.demo.service.test;
 
+import com.alibaba.fastjson.JSON;
 import com.gwg.demo.model.ZtoEnterStock;
-import com.gwg.demo.request.EnterStockRequest;
+import com.gwg.demo.request.AddEnterStockReq;
+import com.gwg.demo.request.QueryEnterStockReq;
 import com.gwg.demo.service.EnterStockService;
 import com.gwg.orm.context.RequestContext;
 import com.gwg.orm.model.UserDTO;
-import com.gwg.orm.util.OrderNoUtil;
+import org.apache.commons.collections4.CollectionUtils;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.Request;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,6 +18,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 /**
@@ -56,16 +58,15 @@ public class EnterStockServiceTest {
 	 */
 	@Test
 	public void testAddEnterStockInfo() throws Exception{
-		EnterStockRequest request = new EnterStockRequest();
-		request.setId(1l);
-		request.setBillCode("156566103893044424370");
+		AddEnterStockReq request = new AddEnterStockReq();
+		request.setBillCode("156566103893044424379");
 		request.setDepotCode("ZT39284326400");
 		request.setExpressCompanyCode("EMS");
 		request.setExpressType(1);
-		request.setTakeCode("123456");
+		request.setTakeCode("543216");
 		request.setUploadDate(new Date());
-		request.setReceiveMan("gaoweigang");
-		request.setReceiveManMobile("13817191469");
+		request.setReceiveMan("刘金菊");
+		request.setReceiveManMobile("13817191464");
 
 		enterStockService.addEnterStockInfo(request);
 
@@ -78,7 +79,7 @@ public class EnterStockServiceTest {
 	@Test
 	public void testQueryEnterStockInfoByDepotCodeAndBillCode() throws Exception{
 		//用户登录了才能操作
-		EnterStockRequest request = new EnterStockRequest();
+		QueryEnterStockReq request = new QueryEnterStockReq();
 		request.setBillCode("156566103893044424370");
 		request.setDepotCode("ZT39284326400");
 		LOG.info("查询条件："+request);
@@ -91,7 +92,35 @@ public class EnterStockServiceTest {
 	   
 		
 	}
-	
-	
+
+	/**
+	 * 使用in来查询数据
+	 */
+	@Test
+	public void testQueryEnterStockInfoListByBillCode() throws Exception{
+		//用户登录了才能操作
+		QueryEnterStockReq request = new QueryEnterStockReq();
+		List<String> billCodeList = new ArrayList<String>();
+		billCodeList.add("156566103893044424370");
+		billCodeList.add("156566103893044424371");
+		billCodeList.add("156566103893044424379");
+		request.setBillCodeList(billCodeList);
+		LOG.info("查询条件："+request);
+		List<ZtoEnterStock> enterStockList = enterStockService.queryEnterStockListByBillCode(request);
+		if(CollectionUtils.isEmpty(enterStockList)){
+			return;
+		}
+		enterStockList.forEach( a -> {
+			LOG.info("订单记录： {} ", JSON.toJSONString(a));
+		});
+
+
+	}
+
+	/**
+	 * 使用between来查询数据
+	 */
+
+
 
 }

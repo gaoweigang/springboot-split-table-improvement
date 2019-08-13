@@ -26,7 +26,7 @@ CREATE TABLE zto_enter_stock_0000 (
   receive_man_mobile varchar(64) DEFAULT NULL COMMENT '收件人联系方式',
   receive_man_addr varchar(1024) DEFAULT NULL COMMENT '收件人地址',
   PRIMARY KEY (id),
-  UNIQUE KEY BILLCODE_DEPOTCODE_COMPANYCODE_UNIQUE (bill_code, depot_code, express_company_code) USING BTREE
+  UNIQUE KEY UNIQ_BillCode (bill_code) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE zto_enter_stock_0001 (
@@ -41,7 +41,7 @@ CREATE TABLE zto_enter_stock_0001 (
   receive_man_mobile varchar(64) DEFAULT NULL COMMENT '收件人联系方式',
   receive_man_addr varchar(1024) DEFAULT NULL COMMENT '收件人地址',
   PRIMARY KEY (id),
-  UNIQUE KEY BILLCODE_DEPOTCODE_COMPANYCODE_UNIQUE (bill_code, depot_code, express_company_code) USING BTREE
+  UNIQUE KEY UNIQ_BillCode (bill_code) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE zto_enter_stock_0002 (
@@ -56,7 +56,7 @@ CREATE TABLE zto_enter_stock_0002 (
   receive_man_mobile varchar(64) DEFAULT NULL COMMENT '收件人联系方式',
   receive_man_addr varchar(1024) DEFAULT NULL COMMENT '收件人地址',
   PRIMARY KEY (id),
-  UNIQUE KEY BILLCODE_DEPOTCODE_COMPANYCODE_UNIQUE (bill_code, depot_code, express_company_code) USING BTREE
+  UNIQUE KEY UNIQ_BillCode (bill_code) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE zto_enter_stock_0003 (
@@ -71,7 +71,7 @@ CREATE TABLE zto_enter_stock_0003 (
   receive_man_mobile varchar(64) DEFAULT NULL COMMENT '收件人联系方式',
   receive_man_addr varchar(1024) DEFAULT NULL COMMENT '收件人地址',
   PRIMARY KEY (id),
-  UNIQUE KEY BILLCODE_DEPOTCODE_COMPANYCODE_UNIQUE (bill_code, depot_code, express_company_code) USING BTREE
+  UNIQUE KEY UNIQ_BillCode (bill_code) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
@@ -91,7 +91,7 @@ CREATE TABLE zto_enter_stock_0000 (
   receive_man_mobile varchar(64) DEFAULT NULL COMMENT '收件人联系方式',
   receive_man_addr varchar(1024) DEFAULT NULL COMMENT '收件人地址',
   PRIMARY KEY (id),
-  UNIQUE KEY BILLCODE_DEPOTCODE_COMPANYCODE_UNIQUE (bill_code, depot_code, express_company_code) USING BTREE
+  UNIQUE KEY UNIQ_BillCode (bill_code) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE zto_enter_stock_0001 (
@@ -106,7 +106,7 @@ CREATE TABLE zto_enter_stock_0001 (
   receive_man_mobile varchar(64) DEFAULT NULL COMMENT '收件人联系方式',
   receive_man_addr varchar(1024) DEFAULT NULL COMMENT '收件人地址',
   PRIMARY KEY (id),
-  UNIQUE KEY BILLCODE_DEPOTCODE_COMPANYCODE_UNIQUE (bill_code, depot_code, express_company_code) USING BTREE
+  UNIQUE KEY UNIQ_BillCode (bill_code) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE zto_enter_stock_0002 (
@@ -121,7 +121,7 @@ CREATE TABLE zto_enter_stock_0002 (
   receive_man_mobile varchar(64) DEFAULT NULL COMMENT '收件人联系方式',
   receive_man_addr varchar(1024) DEFAULT NULL COMMENT '收件人地址',
   PRIMARY KEY (id),
-  UNIQUE KEY BILLCODE_DEPOTCODE_COMPANYCODE_UNIQUE (bill_code, depot_code, express_company_code) USING BTREE
+  UNIQUE KEY UNIQ_BillCode (bill_code) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE zto_enter_stock_0003 (
@@ -136,7 +136,7 @@ CREATE TABLE zto_enter_stock_0003 (
   receive_man_mobile varchar(64) DEFAULT NULL COMMENT '收件人联系方式',
   receive_man_addr varchar(1024) DEFAULT NULL COMMENT '收件人地址',
   PRIMARY KEY (id),
-  UNIQUE KEY BILLCODE_DEPOTCODE_COMPANYCODE_UNIQUE (bill_code, depot_code, express_company_code) USING BTREE
+  UNIQUE KEY UNIQ_BillCode (bill_code) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
@@ -156,7 +156,7 @@ CREATE TABLE zto_enter_stock_0000 (
   receive_man_mobile varchar(64) DEFAULT NULL COMMENT '收件人联系方式',
   receive_man_addr varchar(1024) DEFAULT NULL COMMENT '收件人地址',
   PRIMARY KEY (id),
-  UNIQUE KEY BILLCODE_DEPOTCODE_COMPANYCODE_UNIQUE (bill_code, depot_code, express_company_code) USING BTREE
+  UNIQUE KEY UNIQ_BillCode (bill_code) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE zto_enter_stock_0001 (
@@ -171,7 +171,7 @@ CREATE TABLE zto_enter_stock_0001 (
   receive_man_mobile varchar(64) DEFAULT NULL COMMENT '收件人联系方式',
   receive_man_addr varchar(1024) DEFAULT NULL COMMENT '收件人地址',
   PRIMARY KEY (id),
-  UNIQUE KEY BILLCODE_DEPOTCODE_COMPANYCODE_UNIQUE (bill_code, depot_code, express_company_code) USING BTREE
+  UNIQUE KEY UNIQ_BillCode (bill_code) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE zto_enter_stock_0002 (
@@ -186,7 +186,7 @@ CREATE TABLE zto_enter_stock_0002 (
   receive_man_mobile varchar(64) DEFAULT NULL COMMENT '收件人联系方式',
   receive_man_addr varchar(1024) DEFAULT NULL COMMENT '收件人地址',
   PRIMARY KEY (id),
-  UNIQUE KEY BILLCODE_DEPOTCODE_COMPANYCODE_UNIQUE (bill_code, depot_code, express_company_code) USING BTREE
+  UNIQUE KEY UNIQ_BillCode (bill_code) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE zto_enter_stock_0003 (
@@ -201,7 +201,7 @@ CREATE TABLE zto_enter_stock_0003 (
   receive_man_mobile varchar(64) DEFAULT NULL COMMENT '收件人联系方式',
   receive_man_addr varchar(1024) DEFAULT NULL COMMENT '收件人地址',
   PRIMARY KEY (id),
-  UNIQUE KEY BILLCODE_DEPOTCODE_COMPANYCODE_UNIQUE (bill_code, depot_code, express_company_code) USING BTREE
+  UNIQUE KEY UNIQ_BillCode (bill_code) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
@@ -223,7 +223,7 @@ CREATE TABLE zto_enter_stock_0000 (
   receive_man_mobile varchar(64) DEFAULT NULL COMMENT '收件人联系方式',
   receive_man_addr varchar(1024) DEFAULT NULL COMMENT '收件人地址',
   PRIMARY KEY (id),
-  UNIQUE KEY BILLCODE_DEPOTCODE_COMPANYCODE_UNIQUE (bill_code, depot_code, express_company_code) USING BTREE
+  UNIQUE KEY UNIQ_BillCode (bill_code) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE zto_enter_stock_0001 (
@@ -238,7 +238,7 @@ CREATE TABLE zto_enter_stock_0001 (
   receive_man_mobile varchar(64) DEFAULT NULL COMMENT '收件人联系方式',
   receive_man_addr varchar(1024) DEFAULT NULL COMMENT '收件人地址',
   PRIMARY KEY (id),
-  UNIQUE KEY BILLCODE_DEPOTCODE_COMPANYCODE_UNIQUE (bill_code, depot_code, express_company_code) USING BTREE
+  UNIQUE KEY UNIQ_BillCode (bill_code) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE zto_enter_stock_0002 (
@@ -253,7 +253,7 @@ CREATE TABLE zto_enter_stock_0002 (
   receive_man_mobile varchar(64) DEFAULT NULL COMMENT '收件人联系方式',
   receive_man_addr varchar(1024) DEFAULT NULL COMMENT '收件人地址',
   PRIMARY KEY (id),
-  UNIQUE KEY BILLCODE_DEPOTCODE_COMPANYCODE_UNIQUE (bill_code, depot_code, express_company_code) USING BTREE
+  UNIQUE KEY UNIQ_BillCode (bill_code) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE zto_enter_stock_0003 (
@@ -268,6 +268,6 @@ CREATE TABLE zto_enter_stock_0003 (
   receive_man_mobile varchar(64) DEFAULT NULL COMMENT '收件人联系方式',
   receive_man_addr varchar(1024) DEFAULT NULL COMMENT '收件人地址',
   PRIMARY KEY (id),
-  UNIQUE KEY BILLCODE_DEPOTCODE_COMPANYCODE_UNIQUE (bill_code, depot_code, express_company_code) USING BTREE
+  UNIQUE KEY UNIQ_BillCode (bill_code) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

@@ -27,8 +27,8 @@ System.getProperties()：getProperties中所谓的"system properties"其实是�
 Sharing-jdbc配置：
 sharding.dataSources[0].driverClassName:com.mysql.cj.jdbc.Driver
 sharding.dataSources[0].jdbcUrl:jdbc:mysql://127.0.0.1:3306/supermarket_01?useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
-sharding.dataSources[0].username:ztm
-sharding.dataSources[0].password:Shztwddb223%^&
+sharding.dataSources[0].username:root
+sharding.dataSources[0].password:password
 sharding.dataSources[0].readOnly:false
 sharding.dataSources[0].connectionTimeout:3000
 sharding.dataSources[0].idleTimeout:600000
@@ -37,8 +37,8 @@ sharding.dataSources[0].maximumPoolSize:50
 
 sharding.dataSources[1].driverClassName:com.mysql.cj.jdbc.Driver
 sharding.dataSources[1].jdbcUrl:jdbc:mysql://127.0.0.1:3306/supermarket_01?useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
-sharding.dataSources[1].username:ztm
-sharding.dataSources[1].password:Shztwddb223%^&
+sharding.dataSources[1].username:root
+sharding.dataSources[1].password:password
 sharding.dataSources[1].readOnly:false
 sharding.dataSources[1].connectionTimeout:3000
 sharding.dataSources[1].idleTimeout:600000
@@ -48,8 +48,8 @@ sharding.dataSources[1].maximumPoolSize:50
 
 sharding.dataSources[2].driverClassName:com.mysql.cj.jdbc.Driver
 sharding.dataSources[2].jdbcUrl:jdbc:mysql://127.0.0.1:3306/supermarket_02?useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
-sharding.dataSources[2].username:ztm
-sharding.dataSources[2].password:Shztwddb223%^&
+sharding.dataSources[2].username:root
+sharding.dataSources[2].password:password
 sharding.dataSources[2].readOnly:false
 sharding.dataSources[2].connectionTimeout:3000
 sharding.dataSources[2].idleTimeout:600000
@@ -58,8 +58,8 @@ sharding.dataSources[2].maximumPoolSize:50
 
 sharding.dataSources[3].driverClassName:com.mysql.cj.jdbc.Driver
 sharding.dataSources[3].jdbcUrl:jdbc:mysql://127.0.0.1:3306/supermarket_03?useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
-sharding.dataSources[3].username:ztm
-sharding.dataSources[3].password:Shztwddb223%^&
+sharding.dataSources[3].username:root
+sharding.dataSources[3].password:password
 sharding.dataSources[3].readOnly:false
 sharding.dataSources[3].connectionTimeout:3000
 sharding.dataSources[3].idleTimeout:600000

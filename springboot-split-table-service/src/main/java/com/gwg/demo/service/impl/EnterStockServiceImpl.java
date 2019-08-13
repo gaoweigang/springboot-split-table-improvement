@@ -2,14 +2,16 @@ package com.gwg.demo.service.impl;
 
 import java.util.List;
 
+import com.alibaba.fastjson.JSON;
 import com.gwg.demo.dao.EnterStockDao;
+import com.gwg.demo.request.QueryEnterStockReq;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.gwg.demo.model.ZtoEnterStock;
-import com.gwg.demo.request.EnterStockRequest;
+import com.gwg.demo.request.AddEnterStockReq;
 import com.gwg.demo.service.EnterStockService;
 import com.gwg.orm.util.StringUtil;
 
@@ -21,7 +23,7 @@ public class EnterStockServiceImpl implements EnterStockService{
 	@Autowired
 	private EnterStockDao enterStockDao;
 
-	public List<ZtoEnterStock> queryEnterStockByDepotCodeAndBillCode(EnterStockRequest request) throws Exception {
+	public List<ZtoEnterStock> queryEnterStockByDepotCodeAndBillCode(QueryEnterStockReq request) throws Exception {
 		try {
 			if(StringUtil.isEmpty(request, request.getDepotCode(), request.getBillCode())){
                 return null;
@@ -36,12 +38,28 @@ public class EnterStockServiceImpl implements EnterStockService{
 		return null;
 	}
 
+	public List<ZtoEnterStock> queryEnterStockListByBillCode(QueryEnterStockReq request) throws Exception{
+		try {
+			if(StringUtil.isEmpty(request.getBillCodeList())){
+				return null;
+			}
+			LOG.info("请求参数, 运单号：{}", JSON.toJSONString(request.getBillCodeList()));
+			List<ZtoEnterStock> enterStockList = enterStockDao.selectEnterStockListByBillCode(request.getBillCodeList());
+			LOG.info("返回结果："+enterStockList.size());
+			return enterStockList;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+
+
 	@Override
-	public void addEnterStockInfo(EnterStockRequest request) throws Exception {
+	public void addEnterStockInfo(AddEnterStockReq request) throws Exception {
 
 		try {
 			ZtoEnterStock enterStock = new ZtoEnterStock();
-			enterStock.setId(request.getId());//12位自增数字+用户ID的后6位
 			enterStock.setDepotCode(request.getDepotCode());
 			enterStock.setBillCode(request.getBillCode());
 			enterStock.setExpressCompanyCode(request.getExpressCompanyCode());

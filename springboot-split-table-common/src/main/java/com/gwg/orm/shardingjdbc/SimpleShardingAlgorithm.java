@@ -61,20 +61,6 @@ public class SimpleShardingAlgorithm {
          */
         @Override
         public String doEqualSharding(Collection<String> collection, ShardingValue<Long> shardingValue) {
-            /*Object number =shardingValue.getValue();
-            Long tableSize = tableConfig.getSize();
-            Long value = null;
-            if(tableConfig.getStrategy()==null||tableConfig.getStrategy().toLowerCase().equals(MOD)){
-                value=Long.parseLong(number.toString());
-            }else if(tableConfig.getStrategy().toLowerCase().equals(HASH)){
-                value=Long.valueOf(Math.abs(number.hashCode()));
-            }else{
-                throw BusinessException.getInstance("sharding jdbc 策略设置非法:{}",tableConfig.getStrategy());
-            }
-
-            Long size = (tableSize-(tableSize/collection.size()))/(collection.size()-1);
-            size = tableSize%size==0?size:size+1;
-            Long ds = (value%tableSize)/size;*/
             String userId = RequestContext.getOrCreate().getUserDTO().getUserId();
             String userIdSub = StringUtils.substring(userId, userId.length() -4 , userId.length());
             Long ds = Long.valueOf(userIdSub) % collection.size();
@@ -85,24 +71,16 @@ public class SimpleShardingAlgorithm {
         @Override
         public Collection<String> doInSharding(Collection<String> collection, ShardingValue<Long> shardingValue) {
             Set<String> dbNameSet = new HashSet<>();
-            for(Object e : shardingValue.getValues()){
-                Long value = Long.parseLong(e.toString());
-                String dbName = doEqualSharding(collection,new ShardingValue<Long>(shardingValue.getLogicTableName(),shardingValue.getColumnName(),value));
-                dbNameSet.add(dbName);
-            }
+            String dbName = doEqualSharding(collection, shardingValue);
+            dbNameSet.add(dbName);
             return dbNameSet;
         }
 
         @Override
         public Collection<String> doBetweenSharding(Collection<String> collection, ShardingValue<Long> shardingValue) {
             Set<String> dbNameSet = new HashSet<>();
-            Range<Long> range = shardingValue.getValueRange();
-            Object lowerEndpointNumber =range.lowerEndpoint();
-            Object upperEndpointNumber = range.upperEndpoint();
-            for (Long i = Long.parseLong(lowerEndpointNumber.toString()); i <= Long.parseLong(upperEndpointNumber.toString()); i++) {
-                String dbName = doEqualSharding(collection,new ShardingValue<Long>(shardingValue.getLogicTableName(),shardingValue.getColumnName(),i));
-                dbNameSet.add(dbName);
-            }
+            String dbName = doEqualSharding(collection, shardingValue);
+            dbNameSet.add(dbName);
             return dbNameSet;
         }
     }
@@ -111,20 +89,11 @@ public class SimpleShardingAlgorithm {
 
         /**
          * 找表： userId后四位div 4 mod 4， 在这里为什么要div 4,为了让尽可能多的位数参与运算
+         *
+         * 这种方案是用户只能查询自己的订单，如果查询所有的订单，则应该从订单号中截取用户ID后4位来处理
          */
         @Override
         public String doEqualSharding(Collection<String> collection, ShardingValue<Long> shardingValue) {
-            /*Object number = shardingValue.getValue();
-            Long tableSize = tableConfig.getSize();
-            Long value = null;
-            if(tableConfig.getStrategy()==null||tableConfig.getStrategy().toLowerCase().equals(MOD)){
-                value=Long.parseLong(number.toString());
-            }else if(tableConfig.getStrategy().toLowerCase().equals(HASH)){
-                value=Long.valueOf(Math.abs(number.hashCode()));
-            }else{
-                throw BusinessException.getInstance("sharding jdbc 策略设置非法:{}",tableConfig.getStrategy());
-            }
-            Long moduloValue = value % tableSize;*/
 
             String userId = RequestContext.getOrCreate().getUserDTO().getUserId();
             String userIdSub = StringUtils.substring(userId, userId.length() -4 , userId.length());
@@ -135,24 +104,16 @@ public class SimpleShardingAlgorithm {
         @Override
         public Collection<String> doInSharding(Collection<String> collection, ShardingValue<Long> shardingValue) {
             Set<String> tableNameSet = new HashSet<>();
-            for(Object e : shardingValue.getValues()){
-                Long value = Long.parseLong(e.toString());
-                String tableName = doEqualSharding(collection,new ShardingValue<Long>(shardingValue.getLogicTableName(),shardingValue.getColumnName(),value));
-                tableNameSet.add(tableName);
-            }
+            String tableName = doEqualSharding(collection, shardingValue);
+            tableNameSet.add(tableName);
             return tableNameSet;
         }
 
         @Override
         public Collection<String> doBetweenSharding(Collection<String> collection, ShardingValue<Long> shardingValue) {
             Set<String> tableNameSet = new HashSet<>();
-            Range<Long> range = shardingValue.getValueRange();
-            Object lowerEndpointNumber =range.lowerEndpoint();
-            Object upperEndpointNumber = range.upperEndpoint();
-            for (Long i = Long.parseLong(lowerEndpointNumber.toString()); i <= Long.parseLong(upperEndpointNumber.toString()); i++) {
-                String tableName = doEqualSharding(collection,new ShardingValue<Long>(shardingValue.getLogicTableName(),shardingValue.getColumnName(),i));
-                tableNameSet.add(tableName);
-            }
+            String tableName = doEqualSharding(collection, shardingValue);
+            tableNameSet.add(tableName);
             return tableNameSet;
         }
     }

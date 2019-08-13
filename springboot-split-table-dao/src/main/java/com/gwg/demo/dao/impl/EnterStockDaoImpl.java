@@ -2,6 +2,7 @@ package com.gwg.demo.dao.impl;
 
 import java.util.List;
 
+import com.alibaba.fastjson.JSON;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,8 +28,18 @@ public class EnterStockDaoImpl implements EnterStockDao{
 		LOG.info("查询条件,形象店编号："+depotCode+"， 运单号："+billCode);
 		Example example = new Example(ZtoEnterStock.class);
 		Criteria criteria = example.createCriteria();
-		criteria.andEqualTo("depotCode", depotCode);
 		criteria.andEqualTo("billCode", billCode);
+		criteria.andEqualTo("depotCode", depotCode);
+		List<ZtoEnterStock> enterStockList =  enterStockMapper.selectByExample(example);
+		return enterStockList;
+	}
+
+	public List<ZtoEnterStock> selectEnterStockListByBillCode(List<String> billCodeList) throws Exception{
+		LOG.info("查询条件, 运单号：{}", JSON.toJSONString(billCodeList));
+		Example example = new Example(ZtoEnterStock.class);
+		Criteria criteria = example.createCriteria();
+		criteria.andIn("billCode", billCodeList);
+
 		List<ZtoEnterStock> enterStockList =  enterStockMapper.selectByExample(example);
 		return enterStockList;
 	}
